@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE606 - Unit 1: Sensor Electronics</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        .subject-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+            color: var(--light);
+        }
+        
+        .content-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin-top: 25px;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .definition {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .summary {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .next-unit {
+            text-align: right;
+            font-style: italic;
+            color: var(--gray);
+        }
+        
+        @media (max-width: 768px) {
+            .subject-info {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+ 
+        <div class="subject-info">
+            <span>Unit 1: Introduction to Sensor Electronics</span>
+   
+        </div>
+    </header>
+    
+    <div class="content-card">
+        <h2>1.1 Introduction to Sensors</h2>
+        
+        <h3>Definition of a Sensor</h3>
+        <p>A <span class="definition">sensor</span> is a device that detects and responds to a physical stimulus (such as heat, light, pressure, motion, etc.) and converts it into an electrical signal that can be measured or recorded.</p>
+        
+        <h3>Importance of Sensors</h3>
+        <ul>
+            <li>Used in automation, IoT, medical devices, automotive systems, and industrial control</li>
+            <li>Enable real-time monitoring and feedback in electronic systems</li>
+        </ul>
+    </div>
+    
+    <div class="content-card">
+        <h2>1.2 Basic Components of a Sensor System</h2>
+        <p>A sensor system typically consists of:</p>
+        <ol>
+            <li><strong>Sensing Element</strong> – Detects the physical input (e.g., thermistor for temperature)</li>
+            <li><strong>Signal Conditioning Circuit</strong> – Amplifies, filters, or modifies the raw signal (e.g., Op-amp circuits)</li>
+            <li><strong>Analog-to-Digital Converter (ADC)</strong> – Converts analog signals to digital for microcontrollers</li>
+            <li><strong>Output Interface</strong> – Displays or transmits data (e.g., LCD, serial communication)</li>
+        </ol>
+    </div>
+    
+    <div class="content-card">
+        <h2>1.3 Sensor Characteristics & Performance Parameters</h2>
+        
+        <h3>(a) Static Characteristics</h3>
+        <ul>
+            <li><strong>Accuracy</strong> – Closeness of the measured value to the true value</li>
+            <li><strong>Precision</strong> – Consistency of repeated measurements</li>
+            <li><strong>Sensitivity</strong> – Ratio of output change to input change (e.g., mV/°C)</li>
+            <li><strong>Resolution</strong> – Smallest detectable change in input</li>
+            <li><strong>Linearity</strong> – How closely the sensor follows a straight-line response</li>
+            <li><strong>Hysteresis</strong> – Difference in output when input increases vs. decreases</li>
+        </ul>
+        
+        <h3>(b) Dynamic Characteristics</h3>
+        <ul>
+            <li><strong>Response Time</strong> – Time taken to reach a stable output</li>
+            <li><strong>Bandwidth</strong> – Range of frequencies a sensor can measure</li>
+            <li><strong>Rise Time</strong> – Time to go from 10% to 90% of final value</li>
+        </ul>
+    </div>
+    
+    <div class="content-card">
+        <h2>1.4 Sensor Classification</h2>
+        <p>Sensors can be classified based on:</p>
+        
+        <h3>(a) Type of Measurand (Physical Quantity Detected)</h3>
+        <ul>
+            <li><strong>Temperature Sensors</strong> (Thermocouples, RTDs, Thermistors)</li>
+            <li><strong>Pressure Sensors</strong> (Piezoelectric, Strain Gauge)</li>
+            <li><strong>Position Sensors</strong> (Potentiometers, Encoders, LVDT)</li>
+            <li><strong>Humidity Sensors</strong> (Capacitive, Resistive)</li>
+            <li><strong>Motion Sensors</strong> (Accelerometers, Gyroscopes)</li>
+        </ul>
+        
+        <h3>(b) Power Requirement</h3>
+        <ul>
+            <li><strong>Active Sensors</strong> – Require external power (e.g., Strain gauge)</li>
+            <li><strong>Passive Sensors</strong> – Generate their own signal (e.g., Thermocouple)</li>
+        </ul>
+        
+        <h3>(c) Output Signal Type</h3>
+        <ul>
+            <li><strong>Analog Sensors</strong> – Output varies continuously (e.g., Potentiometer)</li>
+            <li><strong>Digital Sensors</strong> – Output is discrete (e.g., Encoders)</li>
+        </ul>
+        
+        <h3>(d) Operating Principle</h3>
+        <ul>
+            <li><strong>Resistive Sensors</strong> (Strain gauge, Thermistor)</li>
+            <li><strong>Capacitive Sensors</strong> (Humidity sensors)</li>
+            <li><strong>Inductive Sensors</strong> (LVDT, Proximity sensors)</li>
+            <li><strong>Piezoelectric Sensors</strong> (Pressure, Vibration sensors)</li>
+        </ul>
+    </div>
+    
+    <div class="content-card">
+        <h2>1.5 Sensor Measurement Techniques</h2>
+        
+        <h3>(a) Direct vs. Indirect Measurement</h3>
+        <ul>
+            <li><strong>Direct:</strong> Measures the quantity directly (e.g., Thermometer for temperature)</li>
+            <li><strong>Indirect:</strong> Measures a related parameter (e.g., Strain gauge for force)</li>
+        </ul>
+        
+        <h3>(b) Contact vs. Non-Contact Sensing</h3>
+        <ul>
+            <li><strong>Contact Sensors:</strong> Require physical touch (e.g., RTD for temperature)</li>
+            <li><strong>Non-Contact Sensors:</strong> Work remotely (e.g., Infrared thermometer)</li>
+        </ul>
+        
+        <h3>(c) Null vs. Deflection Methods</h3>
+        <ul>
+            <li><strong>Null Method:</strong> Adjusts input until output is zero (e.g., Wheatstone bridge)</li>
+            <li><strong>Deflection Method:</strong> Measures output directly (e.g., Voltmeter reading)</li>
+        </ul>
+    </div>
+    
+    <div class="content-card">
+        <h2>1.6 Signal Conditioning in Sensors</h2>
+        <p>Since raw sensor signals are weak/noisy, they require conditioning:</p>
+        <ol>
+            <li><strong>Amplification</strong> (Op-amps increase signal strength)</li>
+            <li><strong>Filtering</strong> (Removes unwanted noise using LPF/HPF)</li>
+            <li><strong>Linearization</strong> (Corrects non-linear sensor responses)</li>
+            <li><strong>Calibration</strong> (Adjusts sensor output to match known standards)</li>
+        </ol>
+    </div>
+    
+    <div class="content-card">
+        <h2>1.7 Applications of Sensors</h2>
+        <ul>
+            <li><strong>Industrial Automation</strong> (Robotics, CNC machines)</li>
+            <li><strong>Healthcare</strong> (ECG, Blood pressure monitors)</li>
+            <li><strong>Automotive</strong> (ABS, Airbag deployment, Parking sensors)</li>
+            <li><strong>Smart Homes</strong> (Motion detectors, Thermostats)</li>
+            <li><strong>Environmental Monitoring</strong> (Air quality, Weather stations)</li>
+        </ul>
+    </div>
+    
+    <div class="content-card">
+        <h2>1.8 Trends in Sensor Technology</h2>
+        <ul>
+            <li><strong>Miniaturization</strong> (MEMS sensors in smartphones)</li>
+            <li><strong>Wireless Sensors</strong> (IoT-enabled devices)</li>
+            <li><strong>AI & Smart Sensors</strong> (Self-calibrating, predictive maintenance)</li>
+            <li><strong>Energy Harvesting Sensors</strong> (Powered by ambient energy)</li>
+        </ul>
+        
+        <div class="summary">
+            <h3>Summary</h3>
+            <p>This unit covered the fundamentals of sensors, their classification, characteristics, measurement techniques, and applications. Understanding these basics is crucial for designing and interfacing sensors in real-world systems.</p>
+        </div>
+        
+        <div class="next-unit">
+            <p>Next Unit: Sensor Linearization and Characterization</p>
+        </div>
+    </div>
+</body>
+</html>
